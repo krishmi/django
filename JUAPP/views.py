@@ -22,14 +22,14 @@ def resources(request,dept,year,subject):
 	return render(request,'JUAPP/resources.html',{'sub':subject,})
 
 def pdf_response(request,subject,year,dept,resource,resource_name):
-	with open('/home/krishna/django/media/JUAPP/'+subject+'/'+resource+'/'+resource_name, 'rb') as pdf:
+	with open('/home/krishmi/media/JUAPP/'+subject+'/'+resource+'/'+resource_name, 'rb') as pdf:
 		response = HttpResponse(pdf.read(), content_type='application/pdf')
 		response['Content-Disposition'] = 'inline'
 		return response
 	pdf.closed
 
 def resource(request,dept,year,subject,resource):
-	files=os.listdir('/home/krishna/django/media/JUAPP/'+subject+'/'+resource+'/')
+	files=os.listdir('/home/krishmi/media/JUAPP/'+subject+'/'+resource+'/')
 	form=UploadForm()
 	return render(request,'JUAPP/slides.html',{'files_list':files,'form':form,})
 
