@@ -1,0 +1,27 @@
+body
+{
+	margin:0;
+	padding:0;
+	background-image:url('book-books-bookshelf-159621.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+div
+{
+	background-color:#0066ff;
+    height:30%;
+	width:40%;
+	margin:4%;
+	border-radius:8px;
+	font-size:100px;
+	text-align:center;
+	padding:auto;
+	color:white;
+	display:inline-block;
+}
+
+body
+{
+	
+}

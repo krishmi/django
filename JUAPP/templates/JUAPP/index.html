@@ -1,0 +1,32 @@
+<!DOCTYPE >
+<html>
+	<head>
+		<title>Jadavpur University</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'JUAPP/myStyle.css' %}">
+	</head>
+	<body>
+		<h1>JUAPP</h1>
+		<form name='info_form' action='./check/' method='post'>
+			{% csrf_token %}
+			<select name ='dept' id="dept">
+				<option>Construction</option>	
+				<option>Information Technology</option>	
+				<option>Instrumentation</option>	
+				<option>Power</option>	
+				<option>Printing</option>	
+			</select>
+			<select name='year' id="year">
+				<option>First</option>
+				<option>Second</option>
+				<option>Third</option>
+				<option>Fourth</option>
+				<option>Fifth</option>
+				<option>Sixth</option>
+				<option>Seventh</option>
+				<option>Eighth</option>
+			</select>
+			<input type="submit" value="Submit" id="submit">
+		</form>
+	</body>
+</html>

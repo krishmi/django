@@ -1,0 +1,42 @@
+body
+{
+	background-image:url('books.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+h1
+{
+	color:red;
+	font-size:100px;
+	font-style:italic;
+	margin:100px 35%
+}
+
+form > *
+{
+	height:30px;
+	font-size:20px;
+	border-radius:5px;
+}
+
+#dept
+{
+	margin:5px 20px 50px 350px;
+	width:300px;
+}
+
+#year
+{
+	margin:5px 20px 50px 20px;
+	width:150px;
+}
+
+#submit
+{
+	width:100px;
+	height:40px;
+	font-size:25px;
+	border-radius:6px;
+	margin:0 43% ;
+}

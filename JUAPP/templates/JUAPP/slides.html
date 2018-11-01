@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+	<head>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href='{% static "JUAPP/slides.css"%}'/>
+	</head>
+	<body>
+		{% if files_list  %}
+			<h1>List :</h1>
+			<ul>
+				{% for files in files_list %}
+					<li><a href="./{{files}}">{{files}}</a></li>
+				{% endfor %}
+			</ul>
+			
+		{% else %}
+			<h1>No files in directory</h1>
+		{% endif %}
+		<form action="./uploadFile/" enctype='multipart/form-data' method='post'>
+				{% csrf_token %}
+				{{form}}
+				<input type='submit' name='submit' value='Upload' />
+		</form>
+	</body>
+</html>
